@@ -1,0 +1,42 @@
+<div *ngFor="let post of posts; index as a" >
+<div class="article">    
+    <h2 >{{post.title}}</h2>       
+    <div class="sep"></div>
+    <p class="article-text">{{post.body}}</p>
+    <div class="article-bot"><div class="bot1"><button class="readmore" (click)="x!=a ?  x=a : x=-1"> {{a==x ? 'Hide Comments' : 'Read Comments'}}</button>
+    </div> <div class="bot2" ><span>{{post.comments.length}} Comments Posted by: {{post.postedBy.username}}</span></div></div>
+    
+    <div *ngIf="a==x">    <div  *ngFor="let comment of posts[a].comments; index as i">
+    <span class="comments"><h3>{{i+1}}. {{comment.name}}</h3> <span class="email">Email:{{comment.email}}</span></span>   
+    <p>{{comment.body}}</p> 
+    </div>
+
+    <form [formGroup]="form" (ngSubmit)="add(commentName.value, commentEmail.value, commentText.value, post.id); commentName.value='';
+        commentEmail.value=''; commentText.value=''">
+
+     <div class="input-name"><label>Name:</label> <input formControlName="username" #commentName /></div>
+    <div class="alert" *ngIf="username.touched && username.invalid">
+        <div class="alert" *ngIf="username.errors.required">Username Required</div>
+        <div class="alert" *ngIf="username.errors.minlength">Username must be at least {{username.errors.minlength.requiredLength}} characters</div>
+        <div class="alert"  *ngIf="username.errors.maxlength">Username can have max {{username.errors.maxlength.requiredLength}} characters</div>        
+    </div>
+
+     <div class="input-email"><label>Email:</label> <input type="email" formControlName="email"  #commentEmail /></div>
+     <div class="alert" *ngIf="email.touched && email.invalid">Email is invalid</div>
+
+
+
+     <textarea class="input-text" formControlName="text" placeholder="Your comment here"  #commentText ></textarea>
+        <div class="alert" *ngIf="text.touched && text.invalid">
+        <div class="alert" *ngIf="text.errors.required">Text Required</div>
+        <div class="alert" *ngIf="text.errors.minlength">Comment must be at least {{text.errors.minlength.requiredLength}} characters</div>
+        <div class="alert" *ngIf="text.errors.maxlength">Comment can have max {{text.errors.maxlength.requiredLength}} characters</div>        
+    </div>
+
+    <button class="tag1" type="submit" [disabled]="username.invalid || email.invalid || text.invalid" >Add Comment</button> 
+    
+      
+</form>
+    </div>
+    </div>
+</div>

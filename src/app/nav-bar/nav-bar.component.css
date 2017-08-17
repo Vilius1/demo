@@ -1,0 +1,58 @@
+.header {
+    padding: 80px 0;
+    color: #333333;
+    overflow: hidden;
+    
+}
+
+.aa {
+    color: #333333;
+    text-decoration: none;
+}
+
+.logo {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 42px;
+    float: left;
+    margin: 0;
+  
+}
+
+.nav {
+    float: right;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.nav > ul {
+    list-style: none;
+    margin: 0;
+}
+
+.nav > ul > li {
+    float: left;
+    margin-left: 34px;
+}
+
+.aa, .search {
+    padding: 10px 0;
+    display: block;
+   
+}
+
+.aa:after {
+    content: '';
+    display: block;
+    height: 3px;
+    background: #5b6bbf;
+    margin-top: 8px;
+    width: 0%;
+    transition: width 0.2s ease-out;
+}
+
+.aa:hover:after {
+    width: 100%;
+}
+

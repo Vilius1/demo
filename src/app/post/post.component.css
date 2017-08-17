@@ -1,0 +1,174 @@
+
+
+.article {
+    background-color: white;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 60px 90px 80px 90px;
+    margin-bottom: 45px;
+    margin-top: 0px;    
+   
+}
+
+.article1 {
+    background: white;    
+    padding: 60px 90px 80px 90px;   
+    margin-top: 0px;    
+   
+}
+
+.container {
+    margin-top:45px;
+    background: white;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 45px;
+
+}
+
+.article-date {
+    font-size: 14px;
+    font-weight: bold;
+    color: #bdbdbd;
+    margin: 0;
+}
+.article-bot {
+    
+    font-size: 14px;
+    font-weight: bold;
+    color: #bdbdbd;
+    margin-top: 57px;
+    display:flex;   
+    flex-direction: row;
+    padding:0px;
+
+    
+
+}
+
+.bot1 {
+    padding:0px;
+    margin:0px;
+ 
+}
+.bot2 { 
+    flex-grow:1;    
+    text-align: right;
+}
+
+.article h2, .article1 h2  {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 25px 0 0;
+}
+
+.article-text {
+    font-size: 17px;
+    margin: 0;
+    margin-top:40px;
+    line-height:1.765;
+    text-align: left;
+    
+   
+}
+
+
+.sep {
+  background-color: rgb(238, 238, 238);  
+  width: 756px;
+  height: 2px;
+  margin-top:40px;
+  
+}
+
+.readmore {  
+    
+    font-size: 21px;
+  font-family: "Lato";
+  color: rgb(92, 107, 192);
+  font-weight: bold;
+  text-transform: uppercase;  
+  text-align: left;
+  background-color:transparent; 
+  border: 0px; 
+  padding:0px;
+  user-select: none;
+ 
+}
+
+.tag1 {
+  background-color: #4180ec;  
+  height: 32px;
+  z-index: 179;
+  border:0;
+  font-size: 14px;
+  font-family: "Lato";
+  color: rgb(255, 255, 255);
+  font-weight: bold;  
+  text-align: center;
+  margin-top:20px;
+}
+
+.tag1:disabled {
+  background-color: #4180ec;
+  opacity:0.5;  
+  height: 32px;
+  z-index: 179;
+  border:0;
+  font-size: 14px;
+  font-family: "Lato";
+  color: rgb(255, 255, 255);
+  font-weight: bold;  
+  text-align: center;
+  margin-top:20px;
+}
+
+
+.tag1:active {
+     transform: translateY(4px);
+}
+
+
+.img1 {  
+  width: 100%;
+  height: 636px;
+padding-top:0px;
+padding-bottom: 40px;
+
+}
+
+.img {
+    margin:0;
+    padding:0;
+}
+
+.relative {
+    position:relative;
+}
+
+.comments h3 {
+    display:inline-block;
+    margin-top:20px;
+}
+
+.email {
+    margin-top:20px;
+    float:right;
+}
+
+.input-email, .input-name {    
+    display:block;
+    height:50px;
+    width:150px;
+}
+
+.input-text {
+  display:block;
+  width:100%;
+  height:150px; 
+  margin-top:10px; 
+}
+
+.alert {
+    margin-top:10px;
+    margin-bottom:10px;
+    color:red;
+}
